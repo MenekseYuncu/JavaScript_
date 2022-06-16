@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+
+<!--
+    -değişkenler let Yeniden Bildirilemez.
+    -değişkenler let kullanılmadan önce Bildirilmelidir.
+    -değişkenler let Blok Kapsama sahiptir.
+-->
+
+<p>let ile bir değişken bildirilmeden önce kullanamazsınız.</p>
+<p id="demo"></p>
+
+<script>
+try {
+  carName = "Saab";
+  let carName = "Volvo";
+}
+catch(err) {
+  document.getElementById("demo").innerHTML = err;
+}
+</script>
+<p>------------------------------------------------------------</p>
+
+<!--
+    -değişkenler const Yeniden Bildirilemez.
+    -değişkenler const Yeniden Atanamaz.
+    -değişkenler const Blok Kapsama sahiptir.
+-->
+
+<p>Sabit bir dizi bildirmek, öğeleri değişmez yapmaz:</p>
+
+<p id="a"></p>
+
+<script>
+// Create an Array:
+const cars = ["Saab", "Volvo", "BMW"];
+
+// Change an element:
+cars[0] = "Toyota";
+
+// Add an element:
+cars.push("Audi");
+
+// Display the Array:
+document.getElementById("a").innerHTML = cars; 
+</script>
+    
+<p>---------------------------------------------------</p>
+
+<p>+= operatörü</p>
+
+<p id="b"></p>
+
+<script>
+let text1 = "What a very ";
+text1 += "nice day";
+document.getElementById("b").innerHTML = text1;
+</script>
+
+<p id="demo"></p>
+
+<script>
+let x = 5 + 5;
+let y = "5" + 5;
+let z = "Hello" + 5;
+document.getElementById("b").innerHTML =
+x + "<br>" + y + "<br>" + z;
+</script>
+
+<h3>The % Operator Kalanı gösterme</h3>
+
+<p id="c"></p>
+
+<script>
+let w = 5;
+let r = 2;
+let t = w %  r;
+document.getElementById("c").innerHTML = t;
+</script>
+
+<p>---------------------------------------------------</p>
+
+<p>Boş bir dize hem yasal bir değere hem de bir türe sahiptir:</p>
+
+<p id="d"></p>
+
+<script>
+let car = "";
+document.getElementById("d").innerHTML =
+"The value is: " +
+car + "<br>" +
+"The type is: " + typeof car;
+</script>
+</body>
+</html>
