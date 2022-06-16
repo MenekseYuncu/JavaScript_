@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<p>length özelliği, bir dizenin uzunluğunu döndürür:</p>
+<p id="demo"></p>
+
+<script>
+let text = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+document.getElementById("demo").innerHTML = text.length;
+</script>
+
+<p>----------------------</p>
+
+<p>Dizeler ve nesneler güvenli bir şekilde karşılaştırılamaz.</p>
+
+<p id="d"></p>
+
+<script>
+let x = "John";        // x is a string
+let y = new String("John");  // y is an object
+document.getElementById("d").innerHTML = (x==y);
+</script>
+
+<p>----------------------</p>
+
+<p>Slice() yöntemi, bir dizenin bir bölümünü çıkarır ve çıkarılan parçaları yeni bir dizede döndürür:</p>
+    
+<p id="dem"></p>
+    
+<script>
+    let str = "elma, muz, Kiwi";
+    document.getElementById("dem").innerHTML = str.slice(6,11); 
+</script>
+
+<p>----------------------</p>
+
+<p>substr() ilk parametresi başlangıc konumu ikinci parametresi uzunluğunu veriyor:</p>
+    
+    <p id="demoo"></p>
+    
+    <script>
+    let strr = "Apple, Banana, Kiwi";
+    document.getElementById("demoo").innerHTML = str.substr(7,6);
+    </script>
+
+
+<p>----------------------</p>
+
+<p>Microsoft ile w3scool yer degistirme :</p>
+
+<button onclick="myFunction()">Try it</button>
+
+<p id="l">Please visit Microsoft!</p>
+
+<script>
+function myFunction() {
+  let text = document.getElementById("l").innerHTML;
+  document.getElementById("l").innerHTML =
+  text.replace("Microsoft","W3Schools");
+}
+</script>
+
+<p>----------------------</p>
+
+<p>Büyük harfle yazdırma:</p>
+
+<button onclick="myFunction()">Try it</button>
+
+<p id="demmo">Hello World!</p>
+
+<script>
+function myFunction() {
+  let text = document.getElementById("demmo").innerHTML;
+  document.getElementById("demmo").innerHTML =
+  text.toUpperCase();
+}
+</script>
+
+<p>----------------------</p>
+
+<p>Küçük harfle yazdırma:</p>
+
+<button onclick="myFunction()">Try it</button>
+
+<p id="deemo">Hello World!</p>
+
+<script>
+function myFunction() {
+  let text = document.getElementById("deemo").innerHTML;
+  document.getElementById("deemo").innerHTML =
+  text.toLowerCase();
+}
+</script>
+
+<p>----------------------</p>
+
+<p>padStart() yöntemi, bir dizeyi başka bir dizeyle doldurur:</p>
+
+<p id="ddemo"></p>
+
+<script>
+let textt = "5";
+document.getElementById("ddemo").innerHTML = text.padStart(4,"x");
+</script>
+
+<p>----------------------</p>
+
+<p>charAt()  yöntemi, bir dizgede belirli bir konumdaki karakteri döndürür::</p>
+
+<p id="demo"></p>
+
+<script>
+var texxt = "HELLO WORLD";
+document.getElementById("demo").innerHTML = text.charAt(0);
+</script>
+
+<p>----------------------</p>
+
+<p>ECMAScript 5, dizelerde özellik erişimine izin verir:</p>
+
+<p id="demod"></p>
+
+<script>
+var sstr = "HELLO WORLD";
+document.getElementById("demod").innerHTML = sstr[0];
+</script>
+
+<p>----------------------</p>
+
+<p>Display the first array element, after a string split:</p>
+
+<p id="b"></p>
+
+<script>
+let ttext = "a,b,c,d,e,f";
+const myArray = ttext.split(",");
+document.getElementById("b").innerHTML = myArray[0];
+</script>
+
+<p>----------------------</p>
+
+<p>Using String.split():</p>
+
+<p id="y"></p>
+
+<script>
+let m = "Hello";
+const myArr = m.split("");
+
+m = "";
+for (let i = 0; i < myArr.length; i++) {
+  m += myArr[i] + "<br>"
+}
+document.getElementById("y").innerHTML = m;
+</script>
+
+<p>----------------------</p>
+
+<p>indexOf() yöntemi, belirtilen bir metnin ilk oluşumunun konumunu döndürür:</p>
+
+<p id="f"></p>
+
+<script>
+let j = "Please locate where 'locate' occurs!";
+document.getElementById("f").innerHTML = j.indexOf("locate");
+</script>
+
+<p>lastIndexOf() yöntemi, belirtilen bir metnin son oluşumunun konumunu döndürür:</p>
+
+<p id="ı"></p>
+
+<script>
+let p = "Please locate where 'locate' occurs!";
+document.getElementById("ı").innerHTML = p.lastIndexOf("locate");
+</script>
+
+<p>search() yöntemi, bir dizede belirtilen metnin ilk oluşumunun konumunu döndürür:</p>
+
+<p id="g"></p>
+
+<script>
+let h = "Please locate where 'locate' occurs!";
+document.getElementById("g").innerHTML = h.search("locate");
+</script>
+
+<p>----------------------</p>
+
+<p>Search a string for "ain":</p>
+
+<p id="n"></p>
+
+<script>
+let o = "The rain in SPAIN stays mainly in the plain"; 
+document.getElementById("n").innerHTML = o.match(/ain/g);
+</script>
+
+<p>----------------------</p>
+
+<p>Check if a string includes "world":</p>
+
+<p id="e"></p>
+
+<script>
+let s = "Hello world, welcome to the universe.";
+document.getElementById("e").innerHTML = s.includes("world");
+</script>
+
+<p>----------------------</p>
+<p>Şablon değişmezleri, dizelerdeki değişkenlere izin verir:</p>
+
+<p id="k"></p>
+
+<script>
+let price = 10;
+let VAT = 0.25;
+let total = `Total: ${(price * (1 + VAT)).toFixed(2)}`;
+
+document.getElementById("k").innerHTML = total;
+</script>
+
+<p>----------------------</p>
+
+<p id="t"></p>
+
+
+<script>
+let firstName = "John";
+let lastName = "Doe";
+
+let r = `Welcome ${firstName}, ${lastName}!`;
+
+document.getElementById("t").innerHTML = r;
+</script>
+
+
+</body>
+</html>
