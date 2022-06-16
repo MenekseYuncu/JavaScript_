@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+
+<p id="demo">JavaScript , html içeriğine çevirebilir</p>
+
+<button type="button" onclick='document.getElementById("demo").innerHTML = "Hello JavaScript!"'>Click</button>
+<b>
+
+
+
+<button type="button" onclick="document.getElementById('demo').style.fontSize='35px'">font büyüt</button>
+
+<button type="button" onclick="document.getElementById('demo').style.display='none'">Sakla</button>
+
+
+<p id="b" style="display:none">Hello JavaScript!</p>
+<button type="button" onclick="document.getElementById('b').style.display='block'">gizli oge goster</button>
+
+
+<h2>paragraf değiştirme</h2>
+
+<p id="iki">A Paragraph</p>
+
+<button type="button" onclick="myFunction()">Try it</button>
+
+ <script>
+function myFunction() {
+  document.getElementById("iki").innerHTML = "Paragraph changed.";
+}
+</script>
+
+
+<!-- Pop up açar  //window yazmadan da olur
+<script>
+window.alert(5 + 6);
+</script>
+-->
+
+
+<script>
+    console.log(5 + 6);
+</script>
+
+<p>Direk yazıcıdan çıktı sayfasına gönderir.</p>
+
+<button onclick="window.print()">Yazdır</button>
+
+
+<!--  
+    <p id="demo1"></p>
+<script>
+    let a, b, c ;
+    a = 5;
+    b = 6;
+    c = a + b;
+    document.getElementById("demo1").innerHTML = c;
+</script>
+
+-->
+
+<p id="uc"></p>
+
+<script>
+const pi = 3.14;
+let person = "John Doe";
+let answer = 'Yes I am!';
+
+document.getElementById("uc").innerHTML =
+pi + "<br>" + person + "<br>" + answer;
+</script>
+
+
+<!-- Virgül ile yan yana yazılabilirler-->
+<p id="dort"></p>
+
+<script>
+let isim = "John Doe", carName = "Volvo", price = 200;
+document.getElementById("dort").innerHTML = carName;
+</script>
+
+<!-- Değersiz bildirilen bir değişken, değere sahip  undefined.  -->
+
+<p>"5" + 2 + 3 is:</p>
+<p id="bes"></p>
+
+<script>
+let x = "5" + 2 + 3;
+document.getElementById("bes").innerHTML = x;
+</script>
+
+
+</body>
+</html>
