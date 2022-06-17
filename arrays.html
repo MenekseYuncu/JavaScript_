@@ -1,0 +1,519 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+<p id="demo"></p>
+
+<script>
+const cars = ["Saab", "Volvo", "BMW"];
+document.getElementById("demo").innerHTML = cars;
+</script>
+
+<p>------------------</p>
+<p> bir Dizi oluşturur ve ona değerler atar:</p>
+<p id="deemo"></p>
+
+<script>
+const car = new Array("Saab", "Volvo", "BMW");
+document.getElementById("deemo").innerHTML = car;
+</script>
+
+<p>------------------</p>
+<p>JJavaScript dizisi öğelerine sayısal dizinler kullanılarak erişilir (0'dan başlayarak).</p>
+
+<p id="demoo"></p>
+
+<script>
+const carrs = ["Saab", "Volvo", "BMW"];
+document.getElementById("demoo").innerHTML = carrs[0];
+</script>
+<p>------------------</p>
+
+
+
+<p id="dcemo"></p>
+
+<script>
+const ccars = ["Saab", "Volvo", "BMW"];
+ccars[0] = "Opel";
+document.getElementById("dcemo").innerHTML = ccars;
+</script>
+
+<p>------------------</p>
+
+<p id="ddemo"></p>
+
+<script>
+const fruits = ["Banana", "Orange", "Apple", "Mango"];
+document.getElementById("ddemo").innerHTML = fruits[0];
+</script>
+
+<p>------------------</p>
+
+<p>Son dizisine erişim.</p>
+
+<p id="demıo"></p>
+
+<script>
+var frruits = ["Banana", "Orange", "Apple", "Mango"];
+document.getElementById("demıo").innerHTML = frruits[frruits.length-1];
+</script>
+
+<p>------------------</p>
+
+<p>Bir dizide dolaşmanın en iyi yolu bir standart for döngüsü kullanmaktır:</p>
+
+<p id="dmo"></p>
+
+<script>
+const fruiits = ["Banana", "Orange", "Apple", "Mango"];
+let fLen = fruiits.length;
+
+let text = "<ul>";
+for (let i = 0; i < fLen; i++) {
+  text += "<li>" + fruiits[i] + "</li>";
+}
+text += "</ul>";
+
+document.getElementById("dmo").innerHTML = text;
+</script>
+
+<p>------------------</p>
+<p>Array.forEach(), her dizi öğesi için bir işlev çağırır.</p>
+
+<p id="dxemo"></p>
+
+<script>
+const fruuits = ["Banana", "Orange", "Apple", "Mango"];
+
+let texxt = "<ul>";
+fruuits.forEach(myFunction);
+texxt += "</ul>";
+document.getElementById("dxemo").innerHTML = texxt;
+
+function myFunction(value) {
+  texxt += "<li>" + value + "</li>";
+} 
+</script>
+
+<p>------------------</p>
+
+<p>Push yöntemi, bir diziye yeni bir öğe ekler.</p>
+
+<button onclick="myFunction()">push</button>
+
+<p id="dsemo"></p>
+
+<script>
+const fruitss = ["Banana", "Orange", "Apple"];
+document.getElementById("dsemo").innerHTML = fruitss;
+
+function myFunction() {
+  fruitss.push("Lemon");
+  document.getElementById("dsemo").innerHTML = fruitss;
+}
+</script>
+
+<p>------------------</p>
+<p>length özelliği, push() yöntemini kullanmadan bir diziye yeni öğeler eklemenin kolay bir yolunu sağlar.</p>
+
+<button onclick="myFunction()">Try it</button>
+
+<p id="dfemo"></p>
+
+<script>
+const ffruits = ["Banana", "Orange", "Apple"];
+document.getElementById("dfemo").innerHTML = ffruits;
+
+function myFunction() {
+  ffruits[ffruits.length] = "Lemon";
+  document.getElementById("dfemo").innerHTML = ffruits;
+}
+</script>
+
+<p>------------------</p>
+
+<p>Yüksek indeksli elemanlar eklemek, bir dizide tanımsız "delikler" oluşturabilir.</p>
+
+<p id="dtemo"></p>
+
+<script>
+const fruitts = ["Banana", "Orange", "Apple"];
+fruitts[6] = "Lemon";
+
+let fLent = fruitts.length;
+let textt = "";
+for (i = 0; i < fLent; i++) {
+  textt += fruitts[i] + "<br>";
+}
+
+document.getElementById("dtemo").innerHTML = textt;
+</script>
+
+<!-----Öğe adlarının dize (metin) olmasını istediğinizde nesneleri kullanmalısınız .----->
+
+<!----Öğe adlarının sayı olmasını istediğinizde dizileri kullanmalısınız .---->
+
+<p>-------------------------------------------------------------------</p>
+
+<h2>toString()</h2>
+<p>toString() yöntemi, bir diziyi virgülle ayrılmış bir dize olarak döndürür:</p>
+
+<p id="demot"></p>
+
+<script>
+const fruitst = ["Banana", "Orange", "Apple", "Mango"];
+document.getElementById("demot").innerHTML = fruitst.toString();
+</script>
+
+<p>------------------</p>
+
+<h2>join()</h2> 
+<p>Join() yöntemi, dizi öğelerini bir dizede birleştirir.</p>
+<p>Bu örnekte " * " öğelerini ayırıcı olarak kullandık:</p>
+
+<p id="demod"></p>
+
+<script>
+const fruitsd = ["Banana", "Orange", "Apple", "Mango"];
+document.getElementById("demod").innerHTML = fruitsd.join(" * ");
+</script>
+
+<p>------------------</p>
+<h2>pop()</h2>
+<p>pop() yöntemi, bir diziden son öğeyi kaldırır.</p>
+
+<p id="demo1"></p>
+<p id="demo2"></p>
+
+<script>
+const fruts = ["Banana", "Orange", "Apple", "Mango"];
+document.getElementById("demo1").innerHTML = fruts;
+fruts.pop();
+document.getElementById("demo2").innerHTML = fruts;
+</script>
+
+<h2>pop()</h2>
+<p>pop() yöntemi, "dışarı atılan" değeri döndürür:</p>
+
+<p id="demo11"></p>
+<p id="demo22"></p>
+
+<script>
+const fuits = ["Banana", "Orange", "Apple", "Mango"];
+document.getElementById("demo11").innerHTML = fuits.pop();
+document.getElementById("demo22").innerHTML = fuits;
+</script>
+
+<p>------------------</p>
+<h2>push()</h2>
+<p>push() yöntemi, bir diziye yeni bir öğe ekler:</p>
+
+<p id="demo12"></p>
+<p id="demo23"></p>
+
+<script>
+const fruit = ["Banana", "Orange", "Apple", "Mango"];
+document.getElementById("demo12").innerHTML = fruit;
+fruit.push("Kiwi");
+document.getElementById("demo23").innerHTML = fruit;
+</script>
+
+<p>------------------</p>
+<h2>shift()</h2>
+<p>shift() yöntemi, bir dizinin ilk öğesini kaldırır (ve diğer öğeleri sola "kaydırır"):</p>
+
+<p id="dmo1"></p>
+<p id="dmo2"></p>
+
+<script>
+const frits = ["Banana", "Orange", "Apple", "Mango"];
+document.getElementById("dmo1").innerHTML = frits;
+frits.shift();
+document.getElementById("dmo2").innerHTML = frits;
+</script>
+
+<p>------------------</p>
+<h2>unshift()</h2>
+<p>unshift() yöntemi, bir dizinin başına yeni öğeler ekler:</p>
+
+<p id="demoo1"></p>
+<p id="demoo2"></p>
+
+<script>
+const frouits = ["Banana", "Orange", "Apple", "Mango"];
+document.getElementById("demoo1").innerHTML = frouits;
+frouits.unshift("Lemon");
+document.getElementById("demoo2").innerHTML = frouits;
+</script>
+
+<p>------------------</p>
+<p>Dizi öğelerine, dizin numaraları kullanılarak erişilir:</p>
+
+<p id="dxemo1"></p>
+<p id="dxemo2"></p>
+
+<script>
+const fxruits = ["Banana", "Orange", "Apple", "Mango"];
+document.getElementById("dxemo1").innerHTML = fxruits;
+fxruits[1] = "Kiwi";
+document.getElementById("dxemo2").innerHTML = fxruits;
+</script>
+
+<p>------------------</p>
+<h2>concat()</h2>
+<p>concat() yöntemi dizileri birleştirir (birleştirir):</p>
+
+<p id="diemo"></p>
+
+<script>
+const myGirls = ["Cecilie", "Lone"];
+const myBoys = ["Emil", "Tobias", "Linus"];
+const myChildren = myGirls.concat(myBoys);
+
+document.getElementById("diemo").innerHTML = myChildren;
+</script>
+
+<h2>concat()</h2>
+<p>The concat() method can merge string values to arrays:</p>
+
+<p id="demon"></p>
+
+<script>
+const myArray = ["Emil", "Tobias", "Linus"];
+const myChildrenn = myArray.concat("Peter"); 
+document.getElementById("demon").innerHTML = myChildrenn;
+</script>
+<p>------------------</p>
+
+<h2>splice()</h2>
+<p>splice() yöntemi, bir diziye yeni öğeler ekler:</p>
+
+<p id="demo1o"></p>
+<p id="demo2o"></p>
+
+<script>
+const fruitso = ["Banana", "Orange", "Apple", "Mango"];
+document.getElementById("demo1o").innerHTML = fruitso;
+
+fruitso.splice(2, 0, "Lemon", "Kiwi");
+document.getElementById("demo2o").innerHTML = fruitso;
+</script>
+
+<h2>splice()</h2>
+
+<p>splice() yöntemi, bir diziye yeni öğeler ekler ve silinmiş öğeleri (varsa) içeren bir dizi döndürür:</p>
+
+<p id="diemo1"></p>
+<p id="diemo2"></p>
+<p id="diemo3"></p>
+
+<script>
+const firuits = ["Banana", "Orange", "Apple", "Mango"];
+document.getElementById("diemo1").innerHTML = "Original Array:<br> " + firuits;
+let removed = firuits.splice(2, 2, "Lemon", "Kiwi"); 
+document.getElementById("diemo2").innerHTML = "New Array:<br>" + firuits;
+document.getElementById("diemo3").innerHTML = "Removed Items:<br> " + removed; 
+</script>
+
+<h2>splice()</h2>
+<p>The splice() methods can be used to remove array elements:</p>
+
+<p id="demor1"></p>
+<p id="demor2"></p>
+
+<script>
+const frurits = ["Banana", "Orange", "Apple", "Mango"];
+document.getElementById("demor1").innerHTML = frurits;
+frurits.splice(0, 1);
+document.getElementById("demor2").innerHTML = frurits;
+</script>
+
+<!--
+    İlk parametre (0), yeni öğelerin eklenmesi (birleştirilmesi) gereken konumu tanımlar .
+
+İkinci parametre (1), kaç öğenin kaldırılması gerektiğini tanımlar .
+
+Parametrelerin geri kalanı atlanır. Yeni unsurlar eklenmeyecektir.
+-->
+<p>------------------</p>
+
+<h2>slice()</h2>
+<p>Bu örnek, dizi öğesi 3'ten ("Apple") başlayarak bir dizinin bir bölümünü dilimler.</p>
+
+<p id="emo"></p>
+
+<script>
+const fruis = ["Banana", "Orange", "Lemon", "Apple", "Mango"];
+const citrus = fruis.slice(3);
+document.getElementById("emo").innerHTML = fruis + "<br><br>" + citrus;
+</script>
+
+<p>-------------------------------------------------------------------</p>
+
+<p>sort() yöntemi, bir diziyi alfabetik olarak sıralar:</p>
+
+<p id="ademo1"></p>
+<p id="ademo2"></p>
+
+<script>
+const afruits = ["Banana", "Orange", "Apple", "Mango"];
+document.getElementById("ademo1").innerHTML = afruits;
+
+afruits.sort();
+document.getElementById("ademo2").innerHTML = afruits;
+</script>
+
+<p>------------------</p>
+<p>reverse() yöntemi, bir dizideki öğeleri tersine çevirir.</p>
+<p>sort() ve reverse() öğelerini birleştirerek bir diziyi azalan düzende sıralayabilirsiniz:</p>
+
+<p id="bdemo1"></p>
+<p id="bdemo2"></p>
+
+<script>
+// Create and display an array:
+const bfruits = ["Banana", "Orange", "Apple", "Mango"];
+document.getElementById("bdemo1").innerHTML = bfruits;
+
+// First sort the array
+bfruits.sort();
+
+// Then reverse it:
+bfruits.reverse();
+
+document.getElementById("bdemo2").innerHTML = bfruits;
+</script>
+
+<p>------------------</p>
+<p>Diziyi artan düzende sıralayın:</p>
+
+<p id="cdemo1"></p>
+<p id="cdemo2"></p>
+
+<script>
+const points = [40, 100, 1, 5, 25, 10];
+document.getElementById("cdemo1").innerHTML = points;  
+
+points.sort(function(a, b){return a - b});
+document.getElementById("cdemo2").innerHTML = points;
+</script>
+
+
+<p>Diziyi azalan düzende sıralayın:</p>
+
+<p id="pdemo1"></p>
+<p id="pdemo2"></p>
+
+<script>
+const ppoints = [40, 100, 1, 5, 25, 10];
+document.getElementById("pdemo1").innerHTML = ppoints;
+
+ppoints.sort(function(a, b){return b - a});
+document.getElementById("pdemo2").innerHTML = ppoints;
+</script>
+<p>------------------</p>
+
+<p>Sort car objects on age:</p>
+
+<p id="demo"></p>
+
+<script>
+const caars = [
+  {type:"Volvo", year:2016},
+  {type:"Saab", year:2001},
+  {type:"BMW", year:2010}
+];
+
+displayCars();
+
+caars.sort(function(a, b){return a.year - b.year});
+displayCars();
+
+function displayCars() {
+  document.getElementById("demo").innerHTML =
+  caars[0].type + " " + caars[0].year + "<br>" +
+  caars[1].type + " " + caars[1].year + "<br>" +
+  caars[2].type + " " + caars[2].year;
+}
+</script>
+
+<p>-------------------------------------------------------------------</p>
+
+<p>Her dizi öğesinde bir işlev gerçekleştirerek yeni bir dizi oluşturur.</p>
+
+<p id="devmo"></p>
+
+<script>
+const numbers1 = [45, 4, 9, 16, 25];
+const numbers2 = numbers1.map(myFunction);
+
+document.getElementById("devmo").innerHTML = numbers2;
+
+function myFunction(value, index, array) {
+  return value * 2;
+}
+</script>
+
+<p>------------------</p>
+
+<h2>JavaScript Array.filter()</h2>
+<p>Testi geçen tüm dizi öğeleriyle yeni bir dizi oluşturur.</p>
+
+<p id="ccdemo"></p>
+
+<script>
+const numbers = [45, 4, 9, 16, 25];
+const over18 = numbers.filter(myFunction);
+
+document.getElementById("ccdemo").innerHTML = over18;
+
+function myFunction(value, index, array) {
+  return value > 18;
+}
+</script>
+
+<p>------------------</p>
+
+<h2>JavaScript Array.reduce()</h2>
+<p>Bu örnek, bir dizideki tüm sayıların toplamını bulur:</p>
+
+<p id="demmmo"></p>
+
+<script>
+const nummbers = [45, 4, 9, 16, 25];
+let sum = nummbers.reduce(myFunction);
+
+document.getElementById("demmmo").innerHTML = "The sum is " + sum;
+
+function myFunction(total, value) {
+  return total + value;
+}
+</script>
+<p>------------------</p>
+
+<h2>JavaScript Array.every()</h2>
+<p>Every() yöntemi, tüm dizi değerlerinin bir testi geçip geçmediğini kontrol eder.</p>
+
+<p id="dermo"></p>
+
+<script>
+const numberrs = [45, 4, 9, 16, 25];
+let allOver18 = numberrs.every(myFunction);
+
+document.getElementById("dermo").innerHTML = "All over 18 is " + allOver18;
+
+function myFunction(value) {
+  return value > 18;
+}
+</script>
+
+
+</body>
+</html>
