@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <!-----NaNbir sayının yasal bir sayı olmadığını belirten JavaScript'e ayrılmış bir kelimedir.------>
+
+<p id="z"></p>
+
+<script>
+document.getElementById("z").innerHTML = 100 / "Apple";
+</script>
+
+<p>----------------------</p>
+
+<p>Bir değerin sayı olup olmadığını öğrenmek için global JavaScript işlevini isNaN() kullanabilirsiniz:</p>
+
+<p id="o"></p>
+
+<script>
+let xx = 100 / "Apple";
+document.getElementById("o").innerHTML = isNaN(xx);
+</script>
+
+<p>----------------------</p>
+
+<p>Matematiksel bir işlemde NaN kullanırsanız, sonuç da NaN olacaktır:</p>
+
+<p id="demo"></p>
+
+<script>
+let x = NaN;
+let y = 5;
+document.getElementById("demo").innerHTML = x + y;
+</script>
+
+<p>----------------------</p>
+
+<p>NaN'yi matematiksel bir işlemde kullanırsanız, sonuç bir birleştirme olabilir:</p>
+
+<p id="demoo"></p>
+
+<script>
+let a = NaN;
+let b = "5";
+document.getElementById("demoo").innerHTML = a + b;
+</script>
+
+<!---------NaN tipi sayıdır:--------->
+
+<p>----------------------</p>
+
+<p>Mümkün olan en büyük sayının dışında bir sayı hesaplarsanız, Infinity döndürülür:</p>
+
+<p id="ddemo"></p>
+
+<script>
+let myNumber = 2; 
+let txt = "";
+while (myNumber != Infinity) {
+   myNumber = myNumber * myNumber;
+   txt = txt + myNumber + "<br>";
+}
+document.getElementById("ddemo").innerHTML = txt;
+</script>
+
+<!-------Infinitybir sayıdır: typeof Infinitydöndürür number.------>
+<p>----------------------</p>
+
+<p>Başında 0x olan sayısal sabitler onaltılık olarak yorumlanır:</p>
+
+<p id="demmo"></p>
+
+<script>
+let xxx = 0xFF;
+document.getElementById("demmo").innerHTML = "0xFF = " + xxx;
+</script>
+
+<p>----------------------</p>
+
+<p>toString() yöntemi, taban 2'den 36'ya kadar olan sayıların çıktısını alabilir:</p>
+
+<p id="deemo"></p>
+
+<script>
+let myNumberr = 32;
+document.getElementById("deemo").innerHTML =
+"Decimal 32 = " + "<br><br>" + 
+
+"Hexatrigesimal (base 36): " + myNumberr.toString(36) + "<br>" +
+"Duotrigesimal (base 32): " + myNumberr.toString(32) + "<br>" +
+"Hexadecimal (base 16): " + myNumberr.toString(16) + "<br>" +
+"Duodesimal (base 12): " + myNumberr.toString(12) + "<br>" +
+"Desimal (base 10): " + myNumberr.toString(10) + "<br>" +
+"Octal (base 8): " + myNumberr.toString(8) + "<br>" +
+"Binary (base 2): " + myNumberr.toString(2);
+</script>
+
+<p>----------------------</p>
+
+<p>sayılar, anahtar kelimeyle nesneler olarak da tanımlanabilir new:</p>
+<p id="demno"></p>
+
+<script>
+// x is a number
+let n = 123;
+
+// y is a Number object
+let m = new Number(123);
+
+document.getElementById("demno").innerHTML = typeof n + "<br>" + typeof m;
+</script>
+
+<p>----------------------</p>
+
+<p>toString() yöntemi, bir sayıyı bir dizgeye dönüştürür.</p>
+
+<p id="dtemo"></p>
+
+<script>
+let e = 123;
+document.getElementById("dtemo").innerHTML =
+  e.toString() + "<br>" +
+   (123).toString() + "<br>" +
+   (100 + 23).toString();
+</script>
+
+<p>----------------------</p>
+
+<p>toExponential() yöntemi, sayı yuvarlanmış ve üstel gösterim kullanılarak yazılmış bir dize döndürür.</p>
+
+<p>İsteğe bağlı bir parametre, ondalık noktanın arkasındaki basamak sayısını tanımlar.</p>
+
+<p id="dbemo"></p>
+
+<script>
+let f = 9.656;
+document.getElementById("dbemo").innerHTML =
+  f.toExponential() + "<br>" + 
+  f.toExponential(2) + "<br>" + 
+  f.toExponential(4) + "<br>" + 
+  f.toExponential(6);
+</script>
+
+<p>----------------------</p>
+
+<p>toFixed() yöntemi, bir sayıyı belirli sayıda basamağa yuvarlar.</p>
+<p>Parayla çalışmak için toFixed(2) mükemmeldir.</p>
+
+<p id="dnemo"></p>
+
+<script>
+let d = 9.656;
+document.getElementById("dnemo").innerHTML =
+  d.toFixed(0) + "<br>" +
+  d.toFixed(2) + "<br>" +
+  d.toFixed(4) + "<br>" +
+  d.toFixed(6);
+</script>
+
+<p>----------------------</p>
+
+<p>toPrecision() yöntemi, belirtilen uzunlukta yazılmış bir sayı ile bir dize döndürür:</p>
+
+<p id="dhemo"></p>
+
+<script>
+let h = 9.656;
+document.getElementById("dhemo").innerHTML = 
+  h.toPrecision() + "<br>" +
+  h.toPrecision(2) + "<br>" +
+  h.toPrecision(4) + "<br>" +
+  h.toPrecision(6);  
+</script>
+
+<p>----------------------</p>
+
+<p>valueOf() yöntemi, sayı olarak bir sayı döndürür:</p>
+
+<p id="dkemo"></p>
+
+<script>
+let k = 123;
+
+document.getElementById("dkemo").innerHTML = 
+  k.valueOf() + "<br>" +
+  (123).valueOf() + "<br>" +
+  (100 + 23).valueOf();
+</script>
+
+<p>----------------------</p>
+
+<p>Number() yöntemi, değişkenleri sayılara dönüştürür:</p>
+
+<p id="dexmo"></p>
+
+<script>
+document.getElementById("dexmo").innerHTML = 
+  Number(true) + "<br>" +
+  Number(false) + "<br>" +
+  Number("10") + "<br>" + 
+  Number("  10") + "<br>" +
+  Number("10  ") + "<br>" +
+  Number(" 10  ") + "<br>" +
+  Number("10.33") + "<br>" + 
+  Number("10,33") + "<br>" +
+  Number("10 33") + "<br>" +
+  Number("John");
+</script>
+
+<p>----------------------</p>
+
+<p>Number() yöntemi, bir tarihi sayıya dönüştürebilir:</p>
+
+<p id="debmo"></p>
+
+<script>
+let xxxx = new Date("1970-01-03");
+document.getElementById("debmo").innerHTML = Number(xxxx); 
+</script>
+
+<p>----------------------</p>
+
+<p>Genel JavaScript işlevi parseInt(), dizeleri sayılara dönüştürür:,Yalnızca ilk sayı döndürülür:</p>
+
+<p id="demho"></p>
+
+<script>
+document.getElementById("demho").innerHTML = 
+  parseInt("-10") + "<br>" +
+  parseInt("-10.33") + "<br>" +
+  parseInt("10") + "<br>" +
+  parseInt("10.33") + "<br>" +
+  parseInt("10 6") + "<br>" +  
+  parseInt("10 years") + "<br>" +  
+  parseInt("years 10");  
+</script>
+
+<p>----------------------</p>
+
+<p>MAX_VALUE, JavaScript'te mümkün olan en büyük sayıyı döndürür.</p>
+<!-----myNumber'ın bir değişken, ifade veya değer olduğu myNumber .MAX_VALUE kullanılması, şunu döndürür :undefined---->
+
+<p id="demod"></p>
+
+<script>
+let xy = Number.MAX_VALUE;
+document.getElementById("demod").innerHTML = xy;
+</script>
+
+<p>----------------------</p>
+
+<p>MIN_VALUE, JavaScript'te mümkün olan en küçük sayıyı döndürür.</p>
+
+<p id="demol"></p>
+
+<script>
+let xu = Number.MIN_VALUE;
+document.getElementById("demol").innerHTML = xu;
+</script>
+
+</body>
+</html>
