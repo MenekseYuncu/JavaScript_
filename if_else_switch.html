@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<p>"İyi günler!" saat 18:00'den az ise:</p>
+
+<p id="demo">Good Evening!</p>
+
+<script>
+if (new Date().getHours() < 18) {
+  document.getElementById("demo").innerHTML = "Good day!";
+}
+</script>
+
+<p>------------------</p>
+
+<p>Zamana dayalı bir selamlama:</p>
+
+<p id="demoo"></p>
+
+<script>
+const hour = new Date().getHours(); 
+let greeting;
+
+if (hour < 18) {
+  greeting = "Good day";
+} else {
+  greeting = "Good evening";
+}
+
+document.getElementById("demoo").innerHTML = greeting;
+</script>
+
+<p>------------------</p>
+
+<p>Zamana dayalı bir selamlama:</p>
+
+<p id="demmo"></p>
+
+<script>
+const time = new Date().getHours();
+let greetiing;
+if (time < 10) {
+  greetiing = "Good morning";
+} else if (time < 20) {
+  greetiing = "Good day";
+} else {
+  greetiing = "Good evening";
+}
+document.getElementById("demmo").innerHTML = greetiing;
+</script>
+
+<p>-------------------------------------------------------------------</p>
+
+<!--
+    Switch ifadesi bir kez değerlendirilir.
+    İfadenin değeri, her bir durumun değerleri ile karşılaştırılır.
+    Bir eşleşme varsa, ilgili kod bloğu yürütülür.
+    Eşleşme yoksa, varsayılan kod bloğu yürütülür.
+-->
+
+<p id="deemo"></p>
+
+<script>
+let day;
+switch (new Date().getDay()) {
+  case 0:
+    day = "Sunday";
+    break;
+  case 1:
+    day = "Monday";
+    break;
+  case 2:
+    day = "Tuesday";
+    break;
+  case 3:
+    day = "Wednesday";
+    break;
+  case 4:
+    day = "Thursday";
+    break;
+  case 5:
+    day = "Friday";
+    break;
+  case  6:
+    day = "Saturday";
+}
+document.getElementById("deemo").innerHTML = "Today is " + day;
+</script>
+
+<p>--------default----------</p>
+    
+<p id="ddemo"></p>
+
+<script>
+let text;
+switch (new Date().getDay()) {
+  case 6:
+    text = "Today is Saturday";
+    break;
+  case 0:
+    text = "Today is Sunday";
+    break;
+  default:
+    text = "Looking forward to the Weekend";
+}
+document.getElementById("ddemo").innerHTML = text;
+</script>
+
+<!--ortak case kullanma-->
+<p id="dtemo"></p>
+
+<script>
+let ttext;
+switch (new Date().getDay()) {
+  case 4:
+  case 5:
+    text = "Soon it is Weekend";
+    break;
+  case 0:
+  case 6:
+    text = "It is Weekend";
+    break;
+  default:
+    text = "Looking forward to the Weekend";
+}
+document.getElementById("dtemo").innerHTML = ttext;
+</script>
+
+<p>------------------</p>
+
+<!--
+    Anahtar durumları katı karşılaştırma kullanır (===).
+
+    Değerlerin eşleşmesi için aynı türde olması gerekir.
+
+    Kesin bir karşılaştırma, yalnızca işlenenler aynı türdeyse doğru olabilir.
+
+    Bu örnekte x için eşleşme olmayacak:
+-->
+
+<p id="dvemo"></p>
+
+<script>
+let x = "0";
+
+switch (x) {
+  case 0:
+    text = "Off";
+    break;
+  case 1:
+    text = "On";
+    break;
+  default:
+    text = "No value found";
+}
+document.getElementById("dvemo").innerHTML = text;
+</script>
+</body>
+</html>
