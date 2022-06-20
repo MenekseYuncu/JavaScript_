@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+<p id="demo"></p>
+
+<script>
+const cars = ["BMW", "Volvo", "Saab", "Ford", "Fiat", "Audi"];
+
+let text = "";
+for (let i = 0; i < cars.length; i++) {
+  text += cars[i] + "<br>";
+}
+
+document.getElementById("demo").innerHTML = text;
+</script>
+    
+<p>------------------</p>
+
+<!--
+    JavaScript, farklı döngü türlerini destekler:
+
+            for- bir kod bloğunda birkaç kez dolanır
+            for/in- bir nesnenin özellikleri arasında dolaşır
+            for/of- yinelenebilir bir nesnenin değerleri arasında geçiş yapar
+            while- belirli bir koşul doğruyken bir kod bloğunda döngü yapar
+            do/while- ayrıca belirli bir koşul doğruyken bir kod bloğunda döngü yapar
+-->
+
+<p id="dtemo"></p>
+
+<script>
+let textt = "";
+
+for (let i = 0; i < 5; i++) {
+  textt += "The number is " + i + "<br>";
+}
+
+document.getElementById("dtemo").innerHTML = textt;
+</script>
+<p>-----</p>
+<p id="diemo"></p>
+
+<script>
+const carsi = ["BMW", "Volvo", "Saab", "Ford"];
+let i, len, texti;
+for (i = 0, len = carsi.length, texti = ""; i < len; i++) {
+  texti += carsi[i] + "<br>";
+}
+document.getElementById("diemo").innerHTML = texti;
+</script>
+<p>-----</p>
+<p id="deimo"></p>
+
+<script>
+const icars = ["BMW", "Volvo", "Saab", "Ford"];
+let ii = 2;
+let leni = icars.length;
+let texit = "";
+
+for (; ii < leni; ii++) {
+  texit += icars[ii] + "<br>";
+}
+
+document.getElementById("deimo").innerHTML = texit;
+</script>
+
+<p>--------var----------</p>
+<p id="dkemo"></p>
+
+<script>
+var k = 5;
+for (var k = 0; k < 10; k++) {
+  // some statements
+}
+document.getElementById("dkemo").innerHTML = k;
+</script>
+
+<p>---------let----------</p>
+<p id="djemo"></p>
+
+<script>
+let j = 5;
+for (let j = 0; j < 10; j++) {
+  // some statements
+}
+document.getElementById("djemo").innerHTML = j;
+</script>
+
+<p>------------------</p>
+
+<!--
+    for in döngüsü , bir kişi nesnesi üzerinde yinelenir
+    Her yineleme bir anahtar (x) döndürür
+    Anahtar, anahtarın değerine erişmek için kullanılır
+    Anahtarın değeri kişi[x]
+
+-->
+<h2>JavaScript For In Loop</h2>
+<p>for in ifadesi, bir nesnenin özellikleri arasında döngü yapar:</p>
+
+<p id="dlemo"></p>
+
+<script>
+const person = {fname:"John", lname:"Doe", age:25}; 
+
+let txt = "";
+for (let x in person) {
+  txt += person[x] + " ";
+}
+
+document.getElementById("dlemo").innerHTML = txt;
+</script>
+
+<p>------------------</p>
+
+<!--
+    Dizin sırası önemliyse for in over Array'i kullanmayın .
+
+    Dizin sırası uygulamaya bağlıdır ve dizi değerlerine beklediğiniz sırayla erişilemeyebilir.
+
+    Sıra önemli olduğunda bir for döngüsü, bir for of döngüsü veya Array.forEach() kullanmak daha iyidir .
+-->
+<h2>JavaScript For In</h2>
+<p>for in ifadesi, dizi değerleri üzerinde döngü yapabilir:</p>
+
+<p id="demot"></p>
+
+<script>
+const numbers = [45, 4, 9, 16, 25];
+
+let ttxt = "";
+for (let x in numbers) {
+  ttxt += numbers[x] + "<br>"; 
+}
+
+document.getElementById("demot").innerHTML = ttxt;
+</script>
+
+<p>------------------</p>
+
+<h2>JavaScript Array.forEach()</h2>
+<p>Calls a function once for each array element.</p>
+
+<p id="demon"></p>
+
+<script>
+const nnumbers = [45, 4, 9, 16, 25];
+
+let txtn = "";
+nnumbers.forEach(myFunction);
+document.getElementById("demon").innerHTML = txtn;
+
+function myFunction(value) {
+  txt += value + "<br>"; 
+}
+</script>
+
+<p>------------------</p>
+<h2>JavaScript For Of Loop</h2>
+<p>for of deyimi, yinelenebilir herhangi bir nesnenin değerleri arasında döngü yapar:</p>
+
+<p id="demod"></p>
+
+<script>
+const carsd = ["BMW", "Volvo", "Mini"];
+
+let textd = "";
+for (let x of carsd) {
+  textd += x + "<br>";
+}
+
+document.getElementById("demod").innerHTML = textd;
+</script>
+
+<p>-----</p>
+<h2>JavaScript For Of Loop</h2>
+
+<p>for of deyimi, yinelenebilir bir nesnenin değerleri arasında dolaşır.</p>
+
+<p id="edemo"></p>
+
+<script>
+let language = "JavaScript";
+
+let teext = "";
+for (let x of language) {
+  teext += x + "<br>";
+}
+
+document.getElementById("edemo").innerHTML = teext;
+</script>
+
+<p>------------------</p>
+
+<!--Koşulda kullanılan değişkeni artırmayı unutursanız, döngü asla bitmez. Bu, tarayıcınızı çökertecektir.-->
+<h2>JavaScript While Loop</h2>
+
+<p id="fdemo"></p>
+
+<script>
+let textf = "";
+let a = 0;
+while (a < 10) {
+  textf += "<br>The number is " + a;
+  a++;
+}
+document.getElementById("fdemo").innerHTML = textf;
+</script>
+<p>------------------</p>
+
+<h2>JavaScript Do While Loop</h2>
+
+<p id="dbemo"></p>
+
+<script>
+let textb = ""
+let b = 0;
+
+do {
+  textb += "<br>The number is " + b;
+  b++;
+}
+while (b < 10);  
+
+document.getElementById("dbemo").innerHTML = textb;
+</script>
+
+<p>------------------</p>
+
+<h2>JavaScript Loops</h2>
+
+<p>A loop with a <b>break</b> statement.</p>
+
+<p id="dexmo"></p>
+
+<script>
+let texxt = "";
+for (let i = 0; i < 10; i++) {
+  if (i === 3) { break; }
+  texxt += "The number is " + i + "<br>";
+}
+
+document.getElementById("dexmo").innerHTML = texxt;
+</script>
+
+<p>------------------</p>
+<!--Belirtilen continuebir koşul oluşursa, ifade bir yinelemeyi (döngüde) keser ve döngüdeki bir sonraki yinelemeyle devam eder.-->
+<h2>JavaScript Loops</h2>
+
+<p>Devam deyimi içeren bir döngü .</p>
+
+<p>i = 3 olan adımı atlayacak bir döngü.</p>
+
+<p id="demto"></p>
+
+<script>
+let ttext = "";
+for (let i = 0; i < 10; i++) {
+  if (i === 3) { continue; }
+  ttext += "The number is " + i + "<br>";
+}
+document.getElementById("demto").innerHTML = ttext;
+</script>
+</body>
+</html>
