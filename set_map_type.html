@@ -360,5 +360,35 @@ typeof null + "<br><br>" +
 (null === undefined) + "<br>" +
 (null == undefined);
 </script>
+
+<p>-----------------------------------------------</p>
+
+<h2>The JavaScript typeof Operator</h2>
+
+<p>typeof operatörü, bir değişkenin veya ifadenin türünü döndürür:</p>
+
+<p id="p"></p>
+
+<script>
+let y = "5";
+let x = + y;
+document.getElementById("p").innerHTML = typeof y + "<br>" + typeof x;
+</script>
+
+<p>------------------</p>
+<h2>The JavaScript String() Method</h2>
+
+<p>String() yöntemi, bir sayıyı bir dizeye dönüştürebilir.</p>
+
+<p id="v"></p>
+
+<script>
+let v = 123;
+document.getElementById("v").innerHTML =
+  String(v) + "<br>" +
+  String(123) + "<br>" +
+  String(100 + 23);
+</script>
+
 </body>
 </html>
