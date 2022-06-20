@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!--
+        Bir JavaScript Seti şu şekilde oluşturabilirsiniz:
+
+            Dizi Geçirmeknew Set()
+            Yeni bir Küme oluşturun ve add()değer eklemek için kullanın
+            Yeni bir Küme oluşturun ve add()değişken eklemek için kullanın
+    -->
+    
+<h2>JavaScript Sets</h2>
+<p>Bir Kümeye değerler ekleyin:</p>
+
+<p id="demo"></p>
+
+<script>
+// Create a Set
+const letters = new Set();
+
+// Add Values to the Set
+letters.add("a");
+letters.add("b");
+letters.add("c");
+
+// Display set.size
+document.getElementById("demo").innerHTML = letters.size;
+</script>
+
+<p>-----</p>
+<h2>JavaScript Sets</h2>
+<p>Add variables to a Set:</p>
+
+<p id="demon"></p>
+
+<script>
+// Create a Set
+const letter = new Set();
+
+// Create Variables
+const a = "a";
+const b = "b";
+const c = "c";
+
+// Add the Variables to the Set
+letter.add(a);
+letter.add(b);
+letter.add(c);
+
+// Display set.size
+document.getElementById("demon").innerHTML = letter.size;
+</script>
+
+<p>------------------</p>
+
+<h2>JavaScript Sets</h2>
+<p>Bir Kümeye yeni elemanlar eklemek:</p>
+
+<p id="deo"></p>
+
+<script>
+// Create a new Set
+const leters = new Set(["a","b","c"]);
+
+// Add a new Element
+leters.add("d");
+leters.add("e");
+
+// Display set.size
+document.getElementById("deo").innerHTML = leters.size;
+</script>
+
+<p>------------------</p>
+
+<!--Yöntem forEach(), her Set öğesi için bir işlevi çağırır (çağırır):-->
+<h2>JavaScript Sets</h2>
+<p>forEach() her eleman için bir fonksiyon çağırır:</p>
+
+<p id="dmo"></p>
+
+<script>
+// Create a Set
+const lettes = new Set(["a","b","c"]);
+
+// List all Elements
+let text = "";
+lettes.forEach (function(value) {
+  text += value + "<br>";
+})
+
+document.getElementById("dmo").innerHTML = text;
+</script>
+
+<p>------------------</p>
+
+<!--Yöntem values(), bir Küme içindeki tüm değerleri içeren yeni bir yineleyici nesne döndürür:-->
+<h2>JavaScript Sets</h2>
+<p>Iterating Set values:</p>
+
+<p id="demox"></p>
+
+<script>
+// Create a Set
+const ltters = new Set(["a","b","c"]);
+
+// List all Elements
+let texxt = "";
+for (const x of ltters.values()) {
+  texxt += x + "<br>";
+}
+
+document.getElementById("demox").innerHTML = texxt;
+</script>
+
+<p>---------------Maps-----------------</p>
+
+<!--
+    Aşağıdakileri yaparak bir JavaScript Haritası oluşturabilirsiniz:
+
+    Dizi Geçirmeknew Map()
+    Bir Harita oluşturun ve kullanınMap.set()
+-->
+
+<h2>JavaScript Map Objects</h2>
+<p>Yapıcıya bir Dizi ileterek bir Harita oluşturabilirsiniz new Map():</p>
+
+<p id="demol"></p>
+
+<script>
+// Create a Map
+const fruits = new Map([
+  ["apples", 500],
+  ["bananas", 300],
+  ["oranges", 200]
+]);
+
+document.getElementById("demol").innerHTML = fruits.get("apples");
+</script>
+
+<p>------------------</p>
+
+<!--set(), mevcut Harita değerlerini değiştirmek için de kullanılabilir:    -->
+
+<h2>JavaScript Map Objects</h2>
+<p>Şu yöntemle bir Haritaya öğeler ekleyebilirsiniz Map.Set():</p>
+
+<p id="emo"></p>
+
+<script>
+// Create a Map
+const frits = new Map();
+
+// Set Map Values
+frits.set("apples", 500);
+frits.set("bananas", 300);
+frits.set("oranges", 200);
+
+document.getElementById("emo").innerHTML = frits.get("apples");
+</script>
+
+<p>------------------</p>
+
+<h2>JavaScript Map Objects</h2>
+<p>get(), bir Haritadaki bir anahtarın değerini alır:</p>
+
+<p id="e"></p>
+
+<script>
+// Create a Map
+const fruis = new Map([
+  ["apples", 500],
+  ["bananas", 300],
+  ["oranges", 200]
+]);
+
+document.getElementById("e").innerHTML = fruis.get("apples");
+</script>
+
+<p>------------------</p>
+
+<h2>JavaScript Maps</h2>
+<p>Deleting Map elements:</p>
+
+<p id="pdemo"></p>
+
+<script>
+// Create a Map
+const pfruits = new Map([
+  ["apples", 500],
+  ["bananas", 300],
+  ["oranges", 200]
+]);
+
+// Delete an Element
+pfruits.delete("apples");
+
+document.getElementById("pdemo").innerHTML = pfruits.size;
+</script>
+
+<p>------------------</p>
+<h2>JavaScript Maps</h2>
+<p>Using Map.has():</p>
+
+<p id="a"></p>
+
+<script>
+// Create a Map
+const ruits = new Map([
+  ["apples", 500],
+  ["bananas", 300],
+  ["oranges", 200]
+]);
+
+document.getElementById("a").innerHTML = ruits.has("apples");
+</script>
+
+<p>------------------</p>
+
+<h2>JavaScript Map Objects</h2>
+<p>forEach(), bir Haritadaki her bir anahtar/değer çifti için bir işlev çağırır:</p>
+
+<p id="d"></p>
+
+<script>
+// Create a Map
+const fits = new Map([
+  ["apples", 500],
+  ["bananas", 300],
+  ["oranges", 200]
+]);
+
+let ext = "";
+fits.forEach (function(value, key) {
+  ext += key + ' = ' + value + "<br>"
+})
+
+document.getElementById("d").innerHTML = ext;
+</script>
+
+<p>------------------</p>
+<h2>JavaScript Map Objects</h2>
+<p>entries(), bir Haritada [anahtar, değerler] ile bir yineleyici nesne döndürür:</p>
+
+<p id="o"></p>
+
+<script>
+// Create a Map
+const frui = new Map([
+  ["apples", 500],
+  ["bananas", 300],
+  ["oranges", 200]
+]);
+
+let txt = "";
+for (const x of frui.entries()) {
+  txt += x + "<br>";
+}
+
+document.getElementById("o").innerHTML = txt;
+</script>
+
+<p>-------------Types----------------</p>
+
+<h2>JavaScript typeof</h2>
+<p>İlkel veri değeri, hiçbir ek özellik ve yöntem içermeyen tek bir basit veri değeridir.</p>
+
+<p id="i"></p>
+
+<script>
+document.getElementById("i").innerHTML = 
+typeof "john" + "<br>" + 
+typeof 3.14 + "<br>" +
+typeof true + "<br>" +
+typeof false + "<br>" +
+typeof x;
+</script>
+
+<p>------------------</p>
+
+<h2>JavaScript typeof</h2>
+<p>typeof operatörü, hem nesneler, hem diziler hem de null için nesne döndürür. </p>
+<p>typeof operatörü, işlevler için nesne döndürmez.</p>
+
+<p id="x"></p>
+
+<script>
+document.getElementById("x").innerHTML = 
+typeof {name:'john', age:34} + "<br>" +
+typeof [1,2,3,4] + "<br>" +
+typeof null + "<br>" +
+typeof function myFunc(){};
+</script>
+
+<p>------------------</p>
+<h2>The JavaScript constructor Property</h2>
+
+<p>yapıcı özelliği, bir değişken veya nesne için yapıcı işlevini döndürür.</p>
+
+<p id="t"></p>
+
+<script>
+document.getElementById("t").innerHTML = 
+  "john".constructor + "<br>" +
+  (3.14).constructor + "<br>" +
+  false.constructor + "<br>" +
+  [1,2,3,4].constructor + "<br>" +
+  {name:'john', age:34}.constructor + "<br>" +
+  new Date().constructor + "<br>" +
+  function () {}.constructor;
+</script>
+
+<p>------------------</p>
+
+
+<h2>JavaScript Array Object</h2>
+<p>This "home made" isArray() function returns true when used on an array:</p>
+
+<p id="m"></p>
+
+<script>
+const frus = ["Banana", "Orange", "Apple", "Mango"];
+document.getElementById("m").innerHTML = isArray(frus);
+
+function isArray(myArray) {
+  return myArray.constructor === Array;
+}
+</script>
+
+<p>------------------</p>
+<h2>JavaScript</h2>
+
+<p>Değeri null olarak ayarlayarak nesneler boşaltılabilir .</p>
+
+<p id="s"></p>
+
+<script>
+let person = {firstName:"John", lastName:"Doe", age:50, eyeColor:"blue"};
+person = null;
+document.getElementById("s").innerHTML = typeof person;
+</script>
+
+<p>------------------</p>
+
+<h2>JavaScript</h2>
+
+<p>Tanımsız ve null değer olarak eşittir, ancak tür olarak farklıdır:</p>
+
+<p id="ı"></p>
+
+<script>
+document.getElementById("ı").innerHTML =
+typeof undefined + "<br>" +
+typeof null + "<br><br>" +
+(null === undefined) + "<br>" +
+(null == undefined);
+</script>
+</body>
+</html>
